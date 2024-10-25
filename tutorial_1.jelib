@@ -1,0 +1,39 @@
+# header information:
+Htutorial_1|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D175.0|mocmosAnalog()BT|mocmosNumberOfMetalLayers()I3
+
+# Cell R_Divider;1{lay}
+CR_Divider;1{lay}||mocmos|1727119072224|1728938889164||DRC_last_good_drc_area_date()G1728938797974|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1728938797974
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Pin|pin@0||-100|-46||||
+NMetal-1-Pin|pin@1||-100|54||||
+NMetal-1-Pin|pin@2||96|-17||||
+Ngeneric:Invisible-Pin|pin@3||-3|-51|||||SIM_spice_card(D5G10;)S[vin vin 0 DC 1 ,.tran 0 1]
+NN-Well-Resistor|resnwell@0||-2|20|146.5|3|||SCHEM_resistance(D5G10;)S10k
+NN-Well-Resistor|resnwell@1||-2|-17|146.5|3|||SCHEM_resistance(D5G10;)S10k
+AMetal-1|GND|D5G10;||S900|resnwell@1|left|-100|-17|pin@0||-100|-46
+AMetal-1|VIN|D5G10;||S2700|resnwell@0|left|-100|20|pin@1||-100|54
+AMetal-1|VOUT|D5G10;||S900|resnwell@0|right|96|20|pin@2||96|-17
+AMetal-1|net@3|||S1800|resnwell@1|right|96|-17|pin@2||96|-17
+X
+
+# Cell R_Divider;1{sch}
+CR_Divider;1{sch}||schematic|1727117942330|1728937800394|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NWire_Pin|pin@0||-23|7||||
+NWire_Pin|pin@3||-23|1||||
+NWire_Pin|pin@5||-30|7||||
+Ngeneric:Invisible-Pin|pin@6||-33|3|||||SIM_spice_card(D5G1;)S[vin vin 0 DC 1 ,.tran 0 1]
+NResistor|resnwell@0||-27|7||||3|ATTR_length(D5G0.25;X-1.5;)D187.5|ATTR_width(D5G0.5;X1.5;)D15.0|SCHEM_resistance(D5G1;)S10k
+NResistor|resnwell@1||-23|4|||R|3|ATTR_length(D5G0.25;X-1.5;)D187.5|ATTR_width(D5G0.5;X1.5;)D15.0|SCHEM_resistance(D5G1;)S10k
+Awire|Vin|D5G1;Y1;||0|resnwell@0|a|-29|7|pin@5||-30|7
+Awire|Vout|D5G1;Y1;||1800|resnwell@0|b|-25|7|pin@0||-23|7
+Awire|gnd|D5G1;Y-1;||900|resnwell@1|a|-23|2|pin@3||-23|1
+Awire|net@1|||900|pin@0||-23|7|resnwell@1|b|-23|6
+X

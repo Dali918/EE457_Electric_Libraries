@@ -1,0 +1,15 @@
+*** SPICE deck for cell NAND_2{sch} from library tutorial_4
+*** Created on Tue Oct 15, 2024 01:52:53
+*** Last revised on Tue Oct 15, 2024 20:54:03
+*** Written on Tue Oct 15, 2024 21:07:53 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: NAND_2{sch}
+Mnmos@0 AnandB A net@65 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@65 B gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 AnandB A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@1 AnandB B vdd vdd PMOS L=0.35U W=1.75U
+.END

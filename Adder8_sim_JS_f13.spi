@@ -1,0 +1,60 @@
+*** SPICE deck for cell Adder8_sim_JS_f13{sch} from library lab7_ALU
+*** Created on Sun Oct 27, 2013 11:39:56
+*** Last revised on Sun Oct 27, 2013 11:41:16
+*** Written on Tue Oct 22, 2024 03:18:30 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT lab7_ALU__AdderCell_JS_f13 FROM CELL AdderCell_JS_f13{sch}
+.SUBCKT lab7_ALU__AdderCell_JS_f13 An Bn Cn Cout Sn
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 Sn net@79 gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@1 Cout net@46 gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@2 net@46 An net@44 gnd NMOS L=0.35U W=1.05U
+Mnmos@3 net@44 Bn gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@4 net@46 Cn net@40 gnd NMOS L=0.35U W=1.05U
+Mnmos@5 net@40 An gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@6 net@40 Bn gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@7 net@79 Bn net@145 gnd NMOS L=0.35U W=1.05U
+Mnmos@8 net@145 An net@144 gnd NMOS L=0.35U W=1.05U
+Mnmos@9 net@144 Cn gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@10 net@79 net@46 net@112 gnd NMOS L=0.35U W=1.05U
+Mnmos@11 net@112 An gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@12 net@112 Bn gnd gnd NMOS L=0.35U W=1.05U
+Mnmos@13 net@112 Cn gnd gnd NMOS L=0.35U W=1.05U
+Mpmos@0 vdd net@79 Sn vdd PMOS L=0.35U W=1.05U
+Mpmos@1 vdd An net@6 vdd PMOS L=0.35U W=1.05U
+Mpmos@2 vdd Bn net@6 vdd PMOS L=0.35U W=1.05U
+Mpmos@3 net@6 Bn net@7 vdd PMOS L=0.35U W=1.05U
+Mpmos@4 net@7 An net@46 vdd PMOS L=0.35U W=1.05U
+Mpmos@5 net@6 Cn net@46 vdd PMOS L=0.35U W=1.05U
+Mpmos@6 vdd net@46 Cout vdd PMOS L=0.35U W=1.05U
+Mpmos@7 vdd An net@170 vdd PMOS L=0.35U W=1.05U
+Mpmos@8 vdd Bn net@170 vdd PMOS L=0.35U W=1.05U
+Mpmos@9 vdd Cn net@170 vdd PMOS L=0.35U W=1.05U
+Mpmos@10 net@170 An net@97 vdd PMOS L=0.35U W=1.05U
+Mpmos@11 net@97 Bn net@96 vdd PMOS L=0.35U W=1.05U
+Mpmos@12 net@96 Cn net@79 vdd PMOS L=0.35U W=1.05U
+Mpmos@13 net@170 net@46 net@79 vdd PMOS L=0.35U W=1.05U
+.ENDS lab7_ALU__AdderCell_JS_f13
+
+*** SUBCIRCUIT lab7_ALU__Adder_8bit_JS_f13 FROM CELL Adder_8bit_JS_f13{sch}
+.SUBCKT lab7_ALU__Adder_8bit_JS_f13 Ain[0] Ain[1] Ain[2] Ain[3] Ain[4] Ain[5] Ain[6] Ain[7] Bin[0] Bin[1] Bin[2] Bin[3] Bin[4] Bin[5] Bin[6] Bin[7] Cin Cout Sum[0] Sum[1] Sum[2] Sum[3] Sum[4] Sum[5] Sum[6] Sum[7]
+** GLOBAL gnd
+** GLOBAL vdd
+XAdderCell[0] Ain[0] Bin[0] Cin Carry[0] Sum[0] lab7_ALU__AdderCell_JS_f13
+XAdderCell[1] Ain[1] Bin[1] Carry[0] Carry[1] Sum[1] lab7_ALU__AdderCell_JS_f13
+XAdderCell[2] Ain[2] Bin[2] Carry[1] Carry[2] Sum[2] lab7_ALU__AdderCell_JS_f13
+XAdderCell[3] Ain[3] Bin[3] Carry[2] Carry[3] Sum[3] lab7_ALU__AdderCell_JS_f13
+XAdderCell[4] Ain[4] Bin[4] Carry[3] Carry[4] Sum[4] lab7_ALU__AdderCell_JS_f13
+XAdderCell[5] Ain[5] Bin[5] Carry[4] Carry[5] Sum[5] lab7_ALU__AdderCell_JS_f13
+XAdderCell[6] Ain[6] Bin[6] Carry[5] Carry[6] Sum[6] lab7_ALU__AdderCell_JS_f13
+XAdderCell[7] Ain[7] Bin[7] Carry[6] Cout Sum[7] lab7_ALU__AdderCell_JS_f13
+.ENDS lab7_ALU__Adder_8bit_JS_f13
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Adder8_sim_JS_f13{sch}
+XAdder_8b@0 Ain[0] Ain[1] Ain[2] Ain[3] Ain[4] Ain[5] Ain[6] Ain[7] Bin[0] Bin[1] Bin[2] Bin[3] Bin[4] Bin[5] Bin[6] Bin[7] CarryIn CarryOut Sum[0] Sum[1] Sum[2] Sum[3] Sum[4] Sum[5] Sum[6] Sum[7] lab7_ALU__Adder_8bit_JS_f13
+.END

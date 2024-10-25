@@ -1,0 +1,52 @@
+*** SPICE deck for cell full_adder_sim{lay} from library project_1
+*** Created on Wed Oct 23, 2024 16:20:06
+*** Last revised on Thu Oct 24, 2024 20:56:04
+*** Written on Thu Oct 24, 2024 20:58:25 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT project_1__full_adder FROM CELL full_adder{lay}
+.SUBCKT project_1__full_adder A B Cin Cout gnd Sout vdd
+Mnmos@0 net@70 A gnd gnd NMOS L=0.35U W=1.75U AS=8.524P AD=1.94P PS=18.142U PD=4.608U
+Mnmos@1 gnd B net@70 gnd NMOS L=0.35U W=1.75U AS=1.94P AD=8.524P PS=4.608U PD=18.142U
+Mnmos@2 net@94 B gnd gnd NMOS L=0.35U W=1.75U AS=8.524P AD=1.608P PS=18.142U PD=3.588U
+Mnmos@3 net@190 net@39 net@221 gnd NMOS L=0.35U W=1.75U AS=2.373P AD=2.373P PS=6.212U PD=6.212U
+Mnmos@4 net@221 A gnd gnd NMOS L=0.35U W=1.75U AS=8.524P AD=2.373P PS=18.142U PD=6.212U
+Mnmos@5 net@39 A net@94 gnd NMOS L=0.35U W=1.75U AS=1.608P AD=2.45P PS=3.588U PD=6.3U
+Mnmos@6 net@39 Cin net@70 gnd NMOS L=0.35U W=1.75U AS=1.94P AD=2.45P PS=4.608U PD=6.3U
+Mnmos@7 gnd B net@221 gnd NMOS L=0.35U W=1.75U AS=2.373P AD=8.524P PS=6.212U PD=18.142U
+Mnmos@8 gnd Cin net@221 gnd NMOS L=0.35U W=1.75U AS=2.373P AD=8.524P PS=6.212U PD=18.142U
+Mnmos@9 net@228 A net@190 gnd NMOS L=0.35U W=1.75U AS=2.373P AD=1.531P PS=6.212U PD=3.5U
+Mnmos@10 net@231 B net@228 gnd NMOS L=0.35U W=1.75U AS=1.531P AD=1.608P PS=3.5U PD=3.588U
+Mnmos@11 gnd Cin net@231 gnd NMOS L=0.35U W=1.75U AS=1.608P AD=8.524P PS=3.588U PD=18.142U
+Mnmos@12 Sout net@190 gnd gnd NMOS L=0.35U W=1.75U AS=8.524P AD=2.45P PS=18.142U PD=6.3U
+Mnmos@14 Cout net@39 gnd gnd NMOS L=0.35U W=1.75U AS=8.524P AD=2.297P PS=18.142U PD=6.125U
+Mpmos@0 net@17 A vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=1.991P PS=21.475U PD=4.9U
+Mpmos@1 vdd B net@17 vdd PMOS L=0.35U W=1.75U AS=1.991P AD=10.216P PS=4.9U PD=21.475U
+Mpmos@3 net@39 Cin net@17 vdd PMOS L=0.35U W=1.75U AS=1.991P AD=2.45P PS=4.9U PD=6.3U
+Mpmos@4 net@179 A vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=2.389P PS=21.475U PD=6.23U
+Mpmos@5 net@36 A net@17 vdd PMOS L=0.35U W=1.75U AS=1.991P AD=1.684P PS=4.9U PD=3.675U
+Mpmos@6 net@39 B net@36 vdd PMOS L=0.35U W=1.75U AS=1.684P AD=2.45P PS=3.675U PD=6.3U
+Mpmos@7 net@179 B vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=2.389P PS=21.475U PD=6.23U
+Mpmos@8 net@179 Cin vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=2.389P PS=21.475U PD=6.23U
+Mpmos@9 net@393 A net@179 vdd PMOS L=0.35U W=1.75U AS=2.389P AD=0.919P PS=6.23U PD=2.8U
+Mpmos@10 net@395 B net@393 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=0.919P PS=2.8U PD=2.8U
+Mpmos@11 net@190 Cin net@395 vdd PMOS L=0.35U W=1.75U AS=0.919P AD=2.373P PS=2.8U PD=6.212U
+Mpmos@12 net@190 net@39 net@179 vdd PMOS L=0.35U W=1.75U AS=2.389P AD=2.373P PS=6.23U PD=6.212U
+Mpmos@13 Sout net@190 vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=2.45P PS=21.475U PD=6.3U
+Mpmos@14 Cout net@39 vdd vdd PMOS L=0.35U W=1.75U AS=10.216P AD=2.297P PS=21.475U PD=6.125U
+.ENDS project_1__full_adder
+
+*** TOP LEVEL CELL: full_adder_sim{lay}
+Xfull_add@2 A B Cin Cout gnd Sout vdd project_1__full_adder
+
+* Spice Code nodes in cell cell 'full_adder_sim{lay}'
+vdd vdd 0 dc 5
+VA A 0 PULSE(0 5 0 2n 2n 100n 200n)
+VB B 0 PULSE(0 5 0 2n 2n 200n 400n)
+VCin Cin 0 PULSE(0 5 0 2n 2n 400n 800n)
+CSout Sout 0 250fF
+CCout Cout 0 250fF
+.tran 0 1600n 0 1n
+.include D:\C5_models.txt
+.END

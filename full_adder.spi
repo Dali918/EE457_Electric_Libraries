@@ -1,0 +1,39 @@
+*** SPICE deck for cell full_adder{sch} from library project_1
+*** Created on Sat Oct 19, 2024 19:34:05
+*** Last revised on Wed Oct 23, 2024 15:01:32
+*** Written on Wed Oct 23, 2024 15:01:59 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: full_adder{sch}
+Mnmos@0 net@6 Cin net@31 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@31 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@31 A gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 net@6 A net@30 gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@30 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@98 net@6 net@125 gnd NMOS L=0.35U W=1.75U
+Mnmos@6 net@125 A gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@7 net@125 B gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@8 net@125 Cin gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@9 net@98 A net@264 gnd NMOS L=0.35U W=1.75U
+Mnmos@10 net@264 B net@413 gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@413 Cin gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@12 Cout net@6 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@13 Sout net@98 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@6 Cin net@0 vdd PMOS L=0.35U W=1.75U
+Mpmos@1 net@83 A net@0 vdd PMOS L=0.35U W=1.75U
+Mpmos@2 net@6 B net@83 vdd PMOS L=0.35U W=1.75U
+Mpmos@3 net@0 B vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@4 net@0 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@5 net@98 net@6 net@89 vdd PMOS L=0.35U W=1.75U
+Mpmos@9 net@89 A vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@10 net@89 B vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@11 net@89 Cin vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@12 net@392 A net@89 vdd PMOS L=0.35U W=1.75U
+Mpmos@13 net@207 B net@392 vdd PMOS L=0.35U W=1.75U
+Mpmos@14 net@98 Cin net@207 vdd PMOS L=0.35U W=1.75U
+Mpmos@15 Cout net@6 vdd vdd PMOS L=0.35U W=1.75U
+Mpmos@16 Sout net@98 vdd vdd PMOS L=0.35U W=1.75U
+.END

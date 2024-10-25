@@ -1,0 +1,15 @@
+*** SPICE deck for cell R_Divider{lay} from library tutorial_1
+*** Created on Mon Sep 23, 2024 15:17:52
+*** Last revised on Mon Oct 14, 2024 16:48:09
+*** Written on Mon Oct 14, 2024 16:49:42 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: R_Divider{lay}
+Rresnwell@0 VOUT VIN 10k
+Rresnwell@1 VOUT GND 10k
+
+* Spice Code nodes in cell cell 'R_Divider{lay}'
+vin vin 0 DC 1 
+.tran 0 1
+.END
