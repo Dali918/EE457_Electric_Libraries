@@ -1,0 +1,36 @@
+*** SPICE deck for cell Dlatchsim{lay} from library 3bitCounter
+*** Created on Mon Nov 18, 2024 01:50:03
+*** Last revised on Mon Nov 18, 2024 01:51:51
+*** Written on Mon Nov 18, 2024 01:51:55 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT _3bitCounter__Dlatch FROM CELL Dlatch{lay}
+.SUBCKT _3bitCounter__Dlatch clk D gnd notQ Q vdd
+Mnmos@0 net@1 clk gnd gnd NMOS L=0.35U W=1.75U AS=16.078P AD=3.063P PS=23.042U PD=7.613U
+Mnmos@1 net@12 net@1 D gnd NMOS L=0.35U W=1.75U AS=2.909P AD=3.177P PS=7.437U PD=7.656U
+Mnmos@4 notQ net@12 gnd gnd NMOS L=0.35U W=1.75U AS=16.078P AD=2.986P PS=23.042U PD=7.525U
+Mnmos@5 Q notQ gnd gnd NMOS L=0.35U W=1.75U AS=16.078P AD=3.024P PS=23.042U PD=7.569U
+Mnmos@6 Q clk net@12 gnd NMOS L=0.35U W=1.75U AS=3.177P AD=3.024P PS=7.656U PD=7.569U
+Mpmos@0 vdd clk net@1 vdd PMOS L=0.35U W=3.5U AS=3.063P AD=18.171P PS=7.613U PD=26.717U
+Mpmos@1 D clk net@12 vdd PMOS L=0.35U W=3.5U AS=3.177P AD=2.909P PS=7.656U PD=7.437U
+Mpmos@4 vdd net@12 notQ vdd PMOS L=0.35U W=3.5U AS=2.986P AD=18.171P PS=7.525U PD=26.717U
+Mpmos@5 vdd notQ Q vdd PMOS L=0.35U W=3.5U AS=3.024P AD=18.171P PS=7.569U PD=26.717U
+Mpmos@6 net@12 net@1 Q vdd PMOS L=0.35U W=3.5U AS=3.024P AD=3.177P PS=7.569U PD=7.656U
+.ENDS _3bitCounter__Dlatch
+
+*** TOP LEVEL CELL: Dlatchsim{lay}
+XDlatch@0 clk D gnd notQ Q vdd _3bitCounter__Dlatch
+
+* Spice Code nodes in cell cell 'Dlatchsim{lay}'
+vdd vdd 0 DC 5V
+* Input signals
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n) * Clock signal (50% duty cycle, period = 100ns)
+vd D 0 PULSE(0 5 0n 1n 1n 20n 40n)     * D input signal (50% duty cycle, period = 40ns)
+* Simulation commands
+.tran 1n 200n
+* Include model file
+.include D:\C5_models.txt
+* End of file
+.end
+.END

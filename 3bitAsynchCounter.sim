@@ -1,0 +1,92 @@
+| units: 17.5 tech: mocmos format: SU
+| IRSIM file for cell 3bitAsynchCounter{lay} from library 3bitCounter
+| Created on Mon Nov 18, 2024 13:51:36
+| Last revised on Mon Nov 18, 2024 14:30:39
+| Written on Tue Nov 19, 2024 14:43:57 by Electric VLSI Design System, version 9.07
+n clk gnd Dflipflo@0/net@1 2 10 -55 -14 g=S_gnd s=A_186,P_45 d=A_33,P_14
+n Dflipflo@0/net@1 net@1 Dflipflo@0/net@4 2 10 -22 -13.5 g=S_gnd s=A_31,P_14 d=A_34,P_14
+n Dflipflo@0/net@4 gnd Dflipflo@0/net@19 2 10 32 -14 g=S_gnd s=A_186,P_45 d=A_32,P_14
+n Dflipflo@0/net@19 gnd Dflipflo@0/net@66 2 10 58.5 -14 g=S_gnd s=A_186,P_45 d=A_33,P_14
+n clk Dflipflo@0/net@4 Dflipflo@0/net@66 2 10 5.5 -14 g=S_gnd s=A_34,P_14 d=A_33,P_14
+n clk Dflipflo@0/net@19 Dflipflo@0/net@93 2 10 116.5 -13.5 g=S_gnd s=A_32,P_14 d=A_34,P_14
+n Dflipflo@0/net@93 gnd Q0 2 10 170.5 -14 g=S_gnd s=A_186,P_45 d=A_40,P_15
+n Q0 gnd net@1 2 10 198.5 -14 g=S_gnd s=A_186,P_45 d=A_32,P_14
+n Dflipflo@0/net@100 Dflipflo@0/net@93 net@1 2 10 144 -14 g=S_gnd s=A_34,P_14 d=A_32,P_14
+n clk gnd Dflipflo@0/net@100 2 10 83.5 -15 g=S_gnd s=A_186,P_45 d=A_30,P_14
+p clk Dflipflo@0/net@1 vdd 2 20 -55 14 g=S_vdd s=A_33,P_14 d=A_209,P_52
+p clk Dflipflo@0/net@4 net@1 2 20 -21.5 13.5 g=S_vdd s=A_34,P_14 d=A_31,P_14
+p Dflipflo@0/net@4 Dflipflo@0/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_32,P_14 d=A_209,P_52
+p Dflipflo@0/net@19 Dflipflo@0/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_33,P_14 d=A_209,P_52
+p Dflipflo@0/net@1 Dflipflo@0/net@66 Dflipflo@0/net@4 2 20 6.5 13.5 g=S_vdd s=A_33,P_14 d=A_34,P_14
+p Dflipflo@0/net@100 Dflipflo@0/net@93 Dflipflo@0/net@19 2 20 117 13.5 g=S_vdd s=A_34,P_14 d=A_32,P_14
+p Dflipflo@0/net@93 Q0 vdd 2 20 170.5 13.5 g=S_vdd s=A_40,P_15 d=A_209,P_52
+p Q0 net@1 vdd 2 20 198.5 13.5 g=S_vdd s=A_32,P_14 d=A_209,P_52
+p clk net@1 Dflipflo@0/net@93 2 20 145 13.5 g=S_vdd s=A_32,P_14 d=A_34,P_14
+p clk Dflipflo@0/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_30,P_14 d=A_209,P_52
+n net@1 gnd Dflipflo@1/net@1 2 10 -55 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@1/net@1 net@26 Dflipflo@1/net@4 2 10 -22 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@1/net@4 gnd Dflipflo@1/net@19 2 10 32 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@1/net@19 gnd Dflipflo@1/net@66 2 10 58.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@1 Dflipflo@1/net@4 Dflipflo@1/net@66 2 10 5.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@1 Dflipflo@1/net@19 Dflipflo@1/net@93 2 10 116.5 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@1/net@93 gnd Q1 2 10 170.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Q1 gnd net@26 2 10 198.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@1/net@100 Dflipflo@1/net@93 net@26 2 10 144 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@1 gnd Dflipflo@1/net@100 2 10 83.5 -15 g=S_gnd s=A_30,P_26 d=A_30,P_26
+p net@1 Dflipflo@1/net@1 vdd 2 20 -55 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@1 Dflipflo@1/net@4 net@26 2 20 -21.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@1/net@4 Dflipflo@1/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@1/net@19 Dflipflo@1/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@1/net@1 Dflipflo@1/net@66 Dflipflo@1/net@4 2 20 6.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@1/net@100 Dflipflo@1/net@93 Dflipflo@1/net@19 2 20 117 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@1/net@93 Q1 vdd 2 20 170.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Q1 net@26 vdd 2 20 198.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@1 net@26 Dflipflo@1/net@93 2 20 145 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@1 Dflipflo@1/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+n net@26 gnd Dflipflo@2/net@1 2 10 -55 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@2/net@1 net@35 Dflipflo@2/net@4 2 10 -22 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@2/net@4 gnd Dflipflo@2/net@19 2 10 32 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@2/net@19 gnd Dflipflo@2/net@66 2 10 58.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@26 Dflipflo@2/net@4 Dflipflo@2/net@66 2 10 5.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@26 Dflipflo@2/net@19 Dflipflo@2/net@93 2 10 116.5 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@2/net@93 gnd Q2 2 10 170.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Q2 gnd net@35 2 10 198.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Dflipflo@2/net@100 Dflipflo@2/net@93 net@35 2 10 144 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n net@26 gnd Dflipflo@2/net@100 2 10 83.5 -15 g=S_gnd s=A_30,P_26 d=A_30,P_26
+p net@26 Dflipflo@2/net@1 vdd 2 20 -55 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@26 Dflipflo@2/net@4 net@35 2 20 -21.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@2/net@4 Dflipflo@2/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@2/net@19 Dflipflo@2/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@2/net@1 Dflipflo@2/net@66 Dflipflo@2/net@4 2 20 6.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@2/net@100 Dflipflo@2/net@93 Dflipflo@2/net@19 2 20 117 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Dflipflo@2/net@93 Q2 vdd 2 20 170.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Q2 net@35 vdd 2 20 198.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@26 net@35 Dflipflo@2/net@93 2 20 145 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p net@26 Dflipflo@2/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+C Dflipflo@0/net@100 gnd 7.84
+C vdd gnd 31.15
+C Q0 gnd 7.82
+r vdd_Dflipflo@0 vdd_Dflipflo@2 5.351666666666667
+C vdd gnd 46.08
+C net@35 gnd 18.3
+
+C net@26 gnd 21.38
+
+r net@1_pin@1 net@1_Dflipflo@1 8.00475
+C net@1 gnd 20.83
+C Dflipflo@0/net@93 gnd 9.24
+C Dflipflo@0/net@66 gnd 7.63
+
+C clk gnd 2.13
+
+C Q2 gnd 1.93
+C net@1 gnd 10.07
+
+C Q0 gnd 1.88
+C net@1 gnd 6.4
+C Dflipflo@0/net@19 gnd 13.3
+C clk gnd 11.93
+
+C Q1 gnd 2.13
+C Dflipflo@0/net@1 gnd 6.39
+C Dflipflo@0/net@4 gnd 9.16

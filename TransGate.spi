@@ -1,0 +1,25 @@
+*** SPICE deck for cell TransGate{sch} from library 3bitCounter
+*** Created on Sat Nov 16, 2024 18:39:22
+*** Last revised on Sat Nov 16, 2024 19:12:06
+*** Written on Sun Nov 17, 2024 22:53:13 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: TransGate{sch}
+Mnmos@0 in clk out gnd NMOS L=0.35U W=1.75U
+Mnmos@1 net@3 clk gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@1 net@3 clk vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@2 out net@3 in vdd PMOS L=0.35U W=3.5U
+
+* Spice Code nodes in cell cell 'TransGate{sch}'
+vdd vdd 0 DC 5V
+* Input signals
+vin in 0 PULSE(0 5 0n 1n 1n 20n 40n)   * Input signal to be passed
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n) * Clock signal to control the gate
+* Simulation commands
+.tran 1n 200n
+* Include model file
+.include D:\C5_models.txt
+.END

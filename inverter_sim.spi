@@ -1,0 +1,26 @@
+*** SPICE deck for cell inverter_sim{sch} from library 3bitCounter
+*** Created on Tue Oct 15, 2024 02:23:34
+*** Last revised on Tue Oct 15, 2024 02:28:29
+*** Written on Sun Nov 17, 2024 22:52:52 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT _3bitCounter__inv_20_10 FROM CELL inv_20_10{sch}
+.SUBCKT _3bitCounter__inv_20_10 in out
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 out in gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 out in vdd vdd PMOS L=0.35U W=3.5U
+.ENDS _3bitCounter__inv_20_10
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: inverter_sim{sch}
+Xinv_20_1@0 in out _3bitCounter__inv_20_10
+
+* Spice Code nodes in cell cell 'inverter_sim{sch}'
+vdd vdd 0 DC 5
+vin in 0 DC 0 
+.dc vin 0 5 1m
+.include D:\C5_models.txt
+.END

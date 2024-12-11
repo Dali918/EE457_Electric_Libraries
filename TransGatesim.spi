@@ -1,0 +1,28 @@
+*** SPICE deck for cell TransGatesim{lay} from library 3bitCounter
+*** Created on Sun Nov 17, 2024 23:57:23
+*** Last revised on Mon Nov 18, 2024 00:00:14
+*** Written on Mon Nov 18, 2024 00:00:17 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT _3bitCounter__TransGate FROM CELL TransGate{lay}
+.SUBCKT _3bitCounter__TransGate clk gnd in out vdd
+Mnmos@0 net@1 clk gnd gnd NMOS L=0.35U W=1.75U AS=11.025P AD=2.756P PS=28.35U PD=7.35U
+Mnmos@1 out clk in gnd NMOS L=0.35U W=1.75U AS=3.063P AD=3.139P PS=7.613U PD=7.613U
+Mpmos@0 vdd clk net@1 vdd PMOS L=0.35U W=3.5U AS=2.756P AD=12.862P PS=7.35U PD=28.7U
+Mpmos@1 in net@1 out vdd PMOS L=0.35U W=3.5U AS=3.139P AD=3.063P PS=7.613U PD=7.613U
+.ENDS _3bitCounter__TransGate
+
+*** TOP LEVEL CELL: TransGatesim{lay}
+XTransGat@0 clk gnd in out vdd _3bitCounter__TransGate
+
+* Spice Code nodes in cell cell 'TransGatesim{lay}'
+vdd vdd 0 DC 5V
+* Input signals
+vin in 0 PULSE(0 5 0n 1n 1n 20n 40n)   * Input signal to be passed
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n) * Clock signal to control the gate
+* Simulation commands
+.tran 1n 200n
+* Include model file
+.include D:\C5_models.txt
+.END

@@ -1,0 +1,53 @@
+| units: 17.5 tech: mocmos format: SU
+| IRSIM file for cell Dflipflop{lay} from library 3bitCounter
+| Created on Mon Nov 18, 2024 01:53:20
+| Last revised on Mon Nov 18, 2024 13:37:23
+| Written on Mon Nov 18, 2024 23:32:00 by Electric VLSI Design System, version 9.07
+n clk gnd net@1 2 10 -55 -14 g=S_gnd s=A_558,P_135 d=A_100,P_43
+n net@1 D net@4 2 10 -22 -13.5 g=S_gnd s=A_95,P_42 d=A_103,P_43
+n net@4 gnd net@19 2 10 32 -14 g=S_gnd s=A_558,P_135 d=A_96,P_42
+n net@19 gnd net@66 2 10 58.5 -14 g=S_gnd s=A_558,P_135 d=A_101,P_43
+n clk net@4 net@66 2 10 5.5 -14 g=S_gnd s=A_103,P_43 d=A_101,P_43
+n clk net@19 net@93 2 10 116.5 -13.5 g=S_gnd s=A_96,P_42 d=A_103,P_43
+n net@93 gnd Q 2 10 170.5 -14 g=S_gnd s=A_558,P_135 d=A_120,P_46
+n Q gnd notQ 2 10 198.5 -14 g=S_gnd s=A_558,P_135 d=A_98,P_43
+n net@100 net@93 notQ 2 10 144 -14 g=S_gnd s=A_103,P_43 d=A_98,P_43
+n clk gnd net@100 2 10 83.5 -15 g=S_gnd s=A_558,P_135 d=A_90,P_42
+p clk net@1 vdd 2 20 -55 14 g=S_vdd s=A_100,P_43 d=A_628,P_156
+p clk net@4 D 2 20 -21.5 13.5 g=S_vdd s=A_103,P_43 d=A_95,P_42
+p net@4 net@19 vdd 2 20 32 13.5 g=S_vdd s=A_96,P_42 d=A_628,P_156
+p net@19 net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_101,P_43 d=A_628,P_156
+p net@1 net@66 net@4 2 20 6.5 13.5 g=S_vdd s=A_101,P_43 d=A_103,P_43
+p net@100 net@93 net@19 2 20 117 13.5 g=S_vdd s=A_103,P_43 d=A_96,P_42
+p net@93 Q vdd 2 20 170.5 13.5 g=S_vdd s=A_120,P_46 d=A_628,P_156
+p Q notQ vdd 2 20 198.5 13.5 g=S_vdd s=A_98,P_43 d=A_628,P_156
+p clk notQ net@93 2 20 145 13.5 g=S_vdd s=A_98,P_43 d=A_103,P_43
+p clk net@100 vdd 2 20 83.5 14 g=S_vdd s=A_90,P_42 d=A_628,P_156
+
+C net@66 gnd 7.63
+
+r Q_contact@42 Q_nmos@7 7.0
+r Q_contact@39 Q_pmos@7 14.166666666666668
+C Q gnd 7.82
+
+C clk gnd 11.93
+
+r D_contact@6 D_nmos@1 27.0
+r D_contact@5 D_pmos@1 58.33333333333334
+C D gnd 6.4
+r net@93_contact@54 net@93_pmos@7 148.8
+C net@93 gnd 9.24
+r net@100_contact@61 net@100_nmos@10 27.0
+r net@100_contact@58 net@100_pmos@10 47.5
+C net@100 gnd 7.84
+
+C notQ gnd 10.07
+r net@1_contact@3 net@1_nmos@0 12.0
+r net@1_contact@0 net@1_pmos@0 30.833333333333336
+C net@1 gnd 6.39
+C vdd gnd 31.15
+r net@4_contact@23 net@4_pmos@2 148.8
+C net@4 gnd 9.16
+
+r net@19_contact@57 net@19_nmos@3 114.7
+C net@19 gnd 13.3

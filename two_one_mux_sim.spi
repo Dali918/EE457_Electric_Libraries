@@ -1,0 +1,36 @@
+*** SPICE deck for cell two_one_mux_sim{sch} from library final_project
+*** Created on Mon Dec 09, 2024 23:11:04
+*** Last revised on Mon Dec 09, 2024 23:16:01
+*** Written on Tue Dec 10, 2024 17:04:33 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT final_project__two_one_mux FROM CELL two_one_mux{sch}
+.SUBCKT final_project__two_one_mux I0 I1 out S
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 I0 net@19 out gnd NMOS L=0.35U W=1.75U
+Mnmos@1 I1 S out gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@19 S gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 out S I0 vdd PMOS L=0.35U W=3.5U
+Mpmos@1 out net@19 I1 vdd PMOS L=0.35U W=3.5U
+Mpmos@2 net@19 S vdd vdd PMOS L=0.35U W=3.5U
+.ENDS final_project__two_one_mux
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: two_one_mux_sim{sch}
+Xtwo_one_@0 I0 I1 out S final_project__two_one_mux
+
+* Spice Code nodes in cell cell 'two_one_mux_sim{sch}'
+* Define power supply
+vdd vdd 0 DC 3.3
+* Define inputs
+v_i0 I0 0 PULSE(0 3.3 0n 1n 1n 10n 20n)  * Input I0 (0 to 3.3V pulse with 10ns on, 10ns off)
+v_i1 I1 0 PULSE(0 3.3 0n 1n 1n 15n 30n)  * Input I1 (0 to 3.3V pulse with 15ns on, 15ns off)
+v_s S 0 PULSE(0 3.3 0n 1n 1n 25n 50n)   * Select line S (0 to 3.3V pulse with 25ns on, 25ns off)
+* Specify transient analysis for 100ns
+.tran 1n 100n
+* Include model file
+.include D:\C5_models.txt
+.END

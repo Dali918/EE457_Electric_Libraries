@@ -1,0 +1,54 @@
+*** SPICE deck for cell divider{sch} from library 3bitCounter
+*** Created on Sun Nov 17, 2024 22:44:52
+*** Last revised on Fri Nov 22, 2024 22:52:04
+*** Written on Fri Nov 22, 2024 22:52:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT _3bitCounter__Dflipflop FROM CELL Dflipflop{sch}
+.SUBCKT _3bitCounter__Dflipflop clk D notQ Q Res
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos@0 net@546 clk net@21 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 D net@2 net@21 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 net@564 net@21 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@3 net@2 clk gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@4 net@546 net@564 net@544 gnd NMOS L=0.35U W=1.75U
+Mnmos@11 net@222 clk net@268 gnd NMOS L=0.35U W=1.75U
+Mnmos@12 net@241 clk gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@13 Q net@241 net@268 gnd NMOS L=0.35U W=1.75U
+Mnmos@15 Q notQ gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@16 net@222 net@564 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@21 net@544 Res gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@22 notQ Res net@606 gnd NMOS L=0.35U W=1.75U
+Mnmos@23 net@606 net@268 gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@21 net@2 net@546 vdd PMOS L=0.35U W=3.5U
+Mpmos@1 net@21 clk D vdd PMOS L=0.35U W=3.5U
+Mpmos@2 net@564 net@21 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@3 net@2 clk vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@4 net@546 net@564 clk vdd PMOS L=0.35U W=3.5U
+Mpmos@11 net@268 net@241 net@222 vdd PMOS L=0.35U W=3.5U
+Mpmos@12 net@241 clk vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@13 net@268 clk Q vdd PMOS L=0.35U W=3.5U
+Mpmos@15 Q notQ vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@16 net@222 net@564 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@20 net@546 Res clk vdd PMOS L=0.35U W=3.5U
+Mpmos@21 notQ Res vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@22 notQ net@268 vdd vdd PMOS L=0.35U W=3.5U
+.ENDS _3bitCounter__Dflipflop
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: divider{sch}
+XDflipflo@0 clk notQ notQ Q Res _3bitCounter__Dflipflop
+
+* Spice Code nodes in cell cell 'divider{sch}'
+vdd vdd 0 DC 5V
+* Clock signal (50% duty cycle, period = 100ns)
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n)
+* Reset signal (low for 50ns, then high for the rest of the simulation)
+vres Res 0 PULSE(0 5 0n 1n 1n 50n 500n)
+.tran 1n 500n 0 1n
+* Include the D flip-flop model
+.include D:\C5_models.txt
+.END

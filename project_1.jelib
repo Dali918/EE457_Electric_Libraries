@@ -190,7 +190,7 @@ ESout[0:7]||D5G2;X-1;Y-1;|conn@4|a|U
 X
 
 # Cell 8bit_ripple_sim;1{lay}
-C8bit_ripple_sim;1{lay}||mocmos|1729816114429|1730005400119||DRC_last_good_drc_area_date()G1730003071398|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1730003071398
+C8bit_ripple_sim;1{lay}||mocmos|1729816114429|1730005400119||DRC_last_good_drc_area_date()G1730007351301|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1730007351301
 I8bit_ripple;1{lay}|8bit_rip@1||-679.5|43.5|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Ngeneric:Invisible-Pin|pin@33||-25|737|||||SIM_spice_card(D5G22;)S["************************* A = -71, B = -29 ***************************",vdd vdd 0 DC 5,* -71 + -29 = -100 = 1011 1001 + 1110 0011 = 1001 1100; carry = 1,* Input Ain bus (-71 = 0xB9 = 10111001 in two's complement),"VAin0 Ain[0] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VAin1 Ain[1] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VAin2 Ain[2] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VAin3 Ain[3] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VAin4 Ain[4] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VAin5 Ain[5] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VAin6 Ain[6] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VAin7 Ain[7] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1",* Input Bin bus (-29 = 0xE3 = 11100011 in two's complement),"VBin0 Bin[0] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VBin1 Bin[1] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VBin2 Bin[2] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VBin3 Bin[3] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VBin4 Bin[4] 0 PULSE(5 0 0 5n 5n 250n 500n)    * 0","VBin5 Bin[5] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VBin6 Bin[6] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1","VBin7 Bin[7] 0 PULSE(0 5 0 5n 5n 250n 500n)    * 1",* Output loads,CCout Cout 0 250fF,"CSout0 Sum[0] 0 250fF","CSout1 Sum[1] 0 250fF","CSout2 Sum[2] 0 250fF","CSout3 Sum[3] 0 250fF","CSout4 Sum[4] 0 250fF","CSout5 Sum[5] 0 250fF","CSout6 Sum[6] 0 250fF","CSout7 Sum[7] 0 250fF",* Analysis commands,.tran 0.1n 500n    * Changed to match 500ns period requirement,* Include model file,".include D:\\C5_models.txt"]
@@ -1102,7 +1102,7 @@ ESout||D5G2;X6.5;|conn@4|a|U
 X
 
 # Cell full_adder_sim;1{lay}
-Cfull_adder_sim;1{lay}||mocmos|1729714806839|1730000492764||DRC_last_good_drc_area_date()G1730000205560|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1730000205560
+Cfull_adder_sim;1{lay}||mocmos|1729714806839|1730000492764||DRC_last_good_drc_area_date()G1730007300426|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1730007300426
 Ngeneric:Facet-Center|art@0||0|0||||AV
 Ifull_adder;1{lay}|full_add@0||0|0|||D5G4;
 Ngeneric:Invisible-Pin|pin@13||2.5|258|||||SIM_spice_card(D5G20;)S[vdd vdd 0 dc 5,VA A 0 PULSE(0 5 0 2n 2n 100n 200n),VB B 0 PULSE(0 5 0 2n 2n 200n 400n),VCin Cin 0 PULSE(0 0 0 2n 2n 400n 800n),CSout Sout 0 250fF,CCout Cout 0 250fF,.tran 0 1600n 0 1n,".include D:\\C5_models.txt"]

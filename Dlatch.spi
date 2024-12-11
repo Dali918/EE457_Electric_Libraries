@@ -1,0 +1,33 @@
+*** SPICE deck for cell Dlatch{sch} from library 3bitCounter
+*** Created on Sat Nov 16, 2024 18:38:12
+*** Last revised on Sun Nov 17, 2024 18:21:42
+*** Written on Sun Nov 17, 2024 22:54:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: Dlatch{sch}
+Mnmos@0 Q clk net@19 gnd NMOS L=0.35U W=1.75U
+Mnmos@1 D net@107 net@19 gnd NMOS L=0.35U W=1.75U
+Mnmos@2 notQ net@19 gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@5 net@107 clk gnd gnd NMOS L=0.35U W=1.75U
+Mnmos@8 Q notQ gnd gnd NMOS L=0.35U W=1.75U
+Mpmos@0 net@19 net@107 Q vdd PMOS L=0.35U W=3.5U
+Mpmos@1 net@19 clk D vdd PMOS L=0.35U W=3.5U
+Mpmos@2 notQ net@19 vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@5 net@107 clk vdd vdd PMOS L=0.35U W=3.5U
+Mpmos@8 Q notQ vdd vdd PMOS L=0.35U W=3.5U
+
+* Spice Code nodes in cell cell 'Dlatch{sch}'
+vdd vdd 0 DC 5V
+* Input signals
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n) * Clock signal (50% duty cycle, period = 100ns)
+vd D 0 PULSE(0 5 0n 1n 1n 20n 40n)     * D input signal (50% duty cycle, period = 40ns)
+* Simulation commands
+.tran 1n 200n
+* Include model file
+.include D:\C5_models.txt
+* End of file
+.end
+.END

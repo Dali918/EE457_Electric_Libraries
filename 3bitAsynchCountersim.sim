@@ -1,0 +1,100 @@
+| units: 17.5 tech: mocmos format: SU
+| IRSIM file for cell 3bitAsynchCountersim{lay} from library 3bitCounter
+| Created on Mon Nov 18, 2024 14:36:09
+| Last revised on Mon Nov 18, 2024 23:16:47
+| Written on Mon Nov 18, 2024 23:23:55 by Electric VLSI Design System, version 9.07
+n clk gnd 3bitAsyn@0/Dflipflo@0/net@1 2 10 -55 -14 g=S_gnd s=A_186,P_45 d=A_33,P_14
+n 3bitAsyn@0/Dflipflo@0/net@1 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@0/net@4 2 10 -22 -13.5 g=S_gnd s=A_31,P_14 d=A_34,P_14
+n 3bitAsyn@0/Dflipflo@0/net@4 gnd 3bitAsyn@0/Dflipflo@0/net@19 2 10 32 -14 g=S_gnd s=A_186,P_45 d=A_32,P_14
+n 3bitAsyn@0/Dflipflo@0/net@19 gnd 3bitAsyn@0/Dflipflo@0/net@66 2 10 58.5 -14 g=S_gnd s=A_186,P_45 d=A_33,P_14
+n clk 3bitAsyn@0/Dflipflo@0/net@4 3bitAsyn@0/Dflipflo@0/net@66 2 10 5.5 -14 g=S_gnd s=A_34,P_14 d=A_33,P_14
+n clk 3bitAsyn@0/Dflipflo@0/net@19 3bitAsyn@0/Dflipflo@0/net@93 2 10 116.5 -13.5 g=S_gnd s=A_32,P_14 d=A_34,P_14
+n 3bitAsyn@0/Dflipflo@0/net@93 gnd Q0 2 10 170.5 -14 g=S_gnd s=A_186,P_45 d=A_40,P_15
+n Q0 gnd 3bitAsyn@0/net@1 2 10 198.5 -14 g=S_gnd s=A_186,P_45 d=A_32,P_14
+n 3bitAsyn@0/Dflipflo@0/net@100 3bitAsyn@0/Dflipflo@0/net@93 3bitAsyn@0/net@1 2 10 144 -14 g=S_gnd s=A_34,P_14 d=A_32,P_14
+n clk gnd 3bitAsyn@0/Dflipflo@0/net@100 2 10 83.5 -15 g=S_gnd s=A_186,P_45 d=A_30,P_14
+p clk 3bitAsyn@0/Dflipflo@0/net@1 vdd 2 20 -55 14 g=S_vdd s=A_33,P_14 d=A_209,P_52
+p clk 3bitAsyn@0/Dflipflo@0/net@4 3bitAsyn@0/net@1 2 20 -21.5 13.5 g=S_vdd s=A_34,P_14 d=A_31,P_14
+p 3bitAsyn@0/Dflipflo@0/net@4 3bitAsyn@0/Dflipflo@0/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_32,P_14 d=A_209,P_52
+p 3bitAsyn@0/Dflipflo@0/net@19 3bitAsyn@0/Dflipflo@0/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_33,P_14 d=A_209,P_52
+p 3bitAsyn@0/Dflipflo@0/net@1 3bitAsyn@0/Dflipflo@0/net@66 3bitAsyn@0/Dflipflo@0/net@4 2 20 6.5 13.5 g=S_vdd s=A_33,P_14 d=A_34,P_14
+p 3bitAsyn@0/Dflipflo@0/net@100 3bitAsyn@0/Dflipflo@0/net@93 3bitAsyn@0/Dflipflo@0/net@19 2 20 117 13.5 g=S_vdd s=A_34,P_14 d=A_32,P_14
+p 3bitAsyn@0/Dflipflo@0/net@93 Q0 vdd 2 20 170.5 13.5 g=S_vdd s=A_40,P_15 d=A_209,P_52
+p Q0 3bitAsyn@0/net@1 vdd 2 20 198.5 13.5 g=S_vdd s=A_32,P_14 d=A_209,P_52
+p clk 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@0/net@93 2 20 145 13.5 g=S_vdd s=A_32,P_14 d=A_34,P_14
+p clk 3bitAsyn@0/Dflipflo@0/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_30,P_14 d=A_209,P_52
+n 3bitAsyn@0/net@1 gnd 3bitAsyn@0/Dflipflo@1/net@1 2 10 -55 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@1/net@1 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@1/net@4 2 10 -22 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@1/net@4 gnd 3bitAsyn@0/Dflipflo@1/net@19 2 10 32 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@1/net@19 gnd 3bitAsyn@0/Dflipflo@1/net@66 2 10 58.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@1/net@4 3bitAsyn@0/Dflipflo@1/net@66 2 10 5.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@1/net@19 3bitAsyn@0/Dflipflo@1/net@93 2 10 116.5 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@1/net@93 gnd Q1 2 10 170.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Q1 gnd 3bitAsyn@0/net@26 2 10 198.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@1/net@100 3bitAsyn@0/Dflipflo@1/net@93 3bitAsyn@0/net@26 2 10 144 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@1 gnd 3bitAsyn@0/Dflipflo@1/net@100 2 10 83.5 -15 g=S_gnd s=A_30,P_26 d=A_30,P_26
+p 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@1/net@1 vdd 2 20 -55 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@1/net@4 3bitAsyn@0/net@26 2 20 -21.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@1/net@4 3bitAsyn@0/Dflipflo@1/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@1/net@19 3bitAsyn@0/Dflipflo@1/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@1/net@1 3bitAsyn@0/Dflipflo@1/net@66 3bitAsyn@0/Dflipflo@1/net@4 2 20 6.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@1/net@100 3bitAsyn@0/Dflipflo@1/net@93 3bitAsyn@0/Dflipflo@1/net@19 2 20 117 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@1/net@93 Q1 vdd 2 20 170.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Q1 3bitAsyn@0/net@26 vdd 2 20 198.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@1 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@1/net@93 2 20 145 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@1 3bitAsyn@0/Dflipflo@1/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+n 3bitAsyn@0/net@26 gnd 3bitAsyn@0/Dflipflo@2/net@1 2 10 -55 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@2/net@1 3bitAsyn@0/net@35 3bitAsyn@0/Dflipflo@2/net@4 2 10 -22 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@2/net@4 gnd 3bitAsyn@0/Dflipflo@2/net@19 2 10 32 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@2/net@19 gnd 3bitAsyn@0/Dflipflo@2/net@66 2 10 58.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@2/net@4 3bitAsyn@0/Dflipflo@2/net@66 2 10 5.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@2/net@19 3bitAsyn@0/Dflipflo@2/net@93 2 10 116.5 -13.5 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@2/net@93 gnd Q2 2 10 170.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n Q2 gnd 3bitAsyn@0/net@35 2 10 198.5 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/Dflipflo@2/net@100 3bitAsyn@0/Dflipflo@2/net@93 3bitAsyn@0/net@35 2 10 144 -14 g=S_gnd s=A_30,P_26 d=A_30,P_26
+n 3bitAsyn@0/net@26 gnd 3bitAsyn@0/Dflipflo@2/net@100 2 10 83.5 -15 g=S_gnd s=A_30,P_26 d=A_30,P_26
+p 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@2/net@1 vdd 2 20 -55 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@2/net@4 3bitAsyn@0/net@35 2 20 -21.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@2/net@4 3bitAsyn@0/Dflipflo@2/net@19 vdd 2 20 32 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@2/net@19 3bitAsyn@0/Dflipflo@2/net@66 vdd 2 20 58.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@2/net@1 3bitAsyn@0/Dflipflo@2/net@66 3bitAsyn@0/Dflipflo@2/net@4 2 20 6.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@2/net@100 3bitAsyn@0/Dflipflo@2/net@93 3bitAsyn@0/Dflipflo@2/net@19 2 20 117 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/Dflipflo@2/net@93 Q2 vdd 2 20 170.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p Q2 3bitAsyn@0/net@35 vdd 2 20 198.5 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@26 3bitAsyn@0/net@35 3bitAsyn@0/Dflipflo@2/net@93 2 20 145 13.5 g=S_vdd s=A_60,P_46 d=A_60,P_46
+p 3bitAsyn@0/net@26 3bitAsyn@0/Dflipflo@2/net@100 vdd 2 20 83.5 14 g=S_vdd s=A_60,P_46 d=A_60,P_46
+
+C clk gnd 2.13
+
+C Q2 gnd 1.93
+C 3bitAsyn@0/net@1 gnd 10.07
+r vdd_Dflipflo@0 vdd_Dflipflo@2 5.351666666666667
+C vdd gnd 46.08
+C 3bitAsyn@0/Dflipflo@0/net@4 gnd 9.16
+
+C Q2 gnd 2.64
+C 3bitAsyn@0/Dflipflo@0/net@66 gnd 7.63
+C clk gnd 11.93
+
+C clk gnd 3.47
+C 3bitAsyn@0/Dflipflo@0/net@1 gnd 6.39
+
+C Q1 gnd 3.12
+
+C Q0 gnd 3.2
+
+C Q1 gnd 2.13
+
+C 3bitAsyn@0/net@26 gnd 21.38
+C 3bitAsyn@0/net@1 gnd 6.4
+C 3bitAsyn@0/net@35 gnd 18.3
+C vdd gnd 31.15
+C Q0 gnd 7.82
+
+C Q0 gnd 1.88
+C 3bitAsyn@0/Dflipflo@0/net@93 gnd 9.24
+C 3bitAsyn@0/Dflipflo@0/net@100 gnd 7.84
+
+r 3bitAsyn@0/net@1_pin@1 3bitAsyn@0/net@1_Dflipflo@1 8.00475
+C 3bitAsyn@0/net@1 gnd 20.83
+C 3bitAsyn@0/Dflipflo@0/net@19 gnd 13.3

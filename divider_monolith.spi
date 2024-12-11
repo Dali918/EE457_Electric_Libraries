@@ -1,0 +1,37 @@
+*** SPICE deck for cell divider_monolith{lay} from library 3bitCounter
+*** Created on Tue Nov 19, 2024 18:01:24
+*** Last revised on Tue Nov 19, 2024 18:04:48
+*** Written on Tue Nov 19, 2024 18:06:31 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: divider_monolith{lay}
+Mnmos@0 net@1 clk gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.063P PS=23.625U PD=7.613U
+Mnmos@1 net@7 net@1 notQ gnd NMOS L=0.35U W=1.75U AS=2.986P AD=3.177P PS=7.525U PD=7.656U
+Mnmos@2 net@21 net@7 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=2.948P PS=23.625U PD=7.481U
+Mnmos@3 net@41 net@21 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.101P PS=23.625U PD=7.613U
+Mnmos@4 net@41 clk net@7 gnd NMOS L=0.35U W=1.75U AS=3.177P AD=3.101P PS=7.656U PD=7.613U
+Mnmos@5 net@12 clk net@21 gnd NMOS L=0.35U W=1.75U AS=2.948P AD=3.177P PS=7.481U PD=7.656U
+Mnmos@6 Q net@12 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.675P PS=23.625U PD=8.05U
+Mnmos@7 notQ Q gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=2.986P PS=23.625U PD=7.525U
+Mnmos@8 notQ net@24 net@12 gnd NMOS L=0.35U W=1.75U AS=3.177P AD=2.986P PS=7.656U PD=7.525U
+Mnmos@9 net@24 clk gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=2.756P PS=23.625U PD=7.35U
+Mpmos@0 vdd clk net@1 vdd PMOS L=0.35U W=3.5U AS=3.063P AD=19.243P PS=7.613U PD=27.329U
+Mpmos@1 notQ clk net@7 vdd PMOS L=0.35U W=3.5U AS=3.177P AD=2.986P PS=7.656U PD=7.525U
+Mpmos@2 vdd net@7 net@21 vdd PMOS L=0.35U W=3.5U AS=2.948P AD=19.243P PS=7.481U PD=27.329U
+Mpmos@3 vdd net@21 net@41 vdd PMOS L=0.35U W=3.5U AS=3.101P AD=19.243P PS=7.613U PD=27.329U
+Mpmos@4 net@7 net@1 net@41 vdd PMOS L=0.35U W=3.5U AS=3.101P AD=3.177P PS=7.613U PD=7.656U
+Mpmos@5 net@21 net@24 net@12 vdd PMOS L=0.35U W=3.5U AS=3.177P AD=2.948P PS=7.656U PD=7.481U
+Mpmos@6 vdd net@12 Q vdd PMOS L=0.35U W=3.5U AS=3.675P AD=19.243P PS=8.05U PD=27.329U
+Mpmos@7 vdd Q notQ vdd PMOS L=0.35U W=3.5U AS=2.986P AD=19.243P PS=7.525U PD=27.329U
+Mpmos@8 net@12 clk notQ vdd PMOS L=0.35U W=3.5U AS=2.986P AD=3.177P PS=7.525U PD=7.656U
+Mpmos@9 vdd clk net@24 vdd PMOS L=0.35U W=3.5U AS=2.756P AD=19.243P PS=7.35U PD=27.329U
+
+* Spice Code nodes in cell cell 'divider_monolith{lay}'
+vdd vdd 0 DC 5V
+* Clock signal (50% duty cycle, period = 100ns)
+vclk clk 0 PULSE(0 5 0n 1n 1n 50n 100n)
+.tran 1n 500n 0 1n
+* Include the D flip-flop model
+.include D:\C5_models.txt
+.END

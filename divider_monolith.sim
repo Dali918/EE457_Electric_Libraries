@@ -1,0 +1,49 @@
+| units: 17.5 tech: mocmos format: SU
+| IRSIM file for cell divider_monolith{lay} from library 3bitCounter
+| Created on Tue Nov 19, 2024 18:01:24
+| Last revised on Tue Nov 19, 2024 18:04:48
+| Written on Tue Nov 19, 2024 18:10:56 by Electric VLSI Design System, version 9.07
+n clk gnd net@1 2 10 -151 -20 g=S_gnd s=A_558,P_135 d=A_100,P_43
+n net@1 notQ net@7 2 10 -118 -19.5 g=S_gnd s=A_97,P_43 d=A_103,P_43
+n net@7 gnd net@21 2 10 -64 -20 g=S_gnd s=A_558,P_135 d=A_96,P_42
+n net@21 gnd net@41 2 10 -37.5 -20 g=S_gnd s=A_558,P_135 d=A_101,P_43
+n clk net@7 net@41 2 10 -90.5 -20 g=S_gnd s=A_103,P_43 d=A_101,P_43
+n clk net@21 net@12 2 10 20.5 -19.5 g=S_gnd s=A_96,P_42 d=A_103,P_43
+n net@12 gnd Q 2 10 74.5 -20 g=S_gnd s=A_558,P_135 d=A_120,P_46
+n Q gnd notQ 2 10 102.5 -20 g=S_gnd s=A_558,P_135 d=A_97,P_43
+n net@24 net@12 notQ 2 10 48 -20 g=S_gnd s=A_103,P_43 d=A_97,P_43
+n clk gnd net@24 2 10 -12.5 -21 g=S_gnd s=A_558,P_135 d=A_90,P_42
+p clk net@1 vdd 2 20 -151 8 g=S_vdd s=A_100,P_43 d=A_628,P_156
+p clk net@7 notQ 2 20 -117.5 7.5 g=S_vdd s=A_103,P_43 d=A_97,P_43
+p net@7 net@21 vdd 2 20 -64 7.5 g=S_vdd s=A_96,P_42 d=A_628,P_156
+p net@21 net@41 vdd 2 20 -37.5 7.5 g=S_vdd s=A_101,P_43 d=A_628,P_156
+p net@1 net@41 net@7 2 20 -89.5 7.5 g=S_vdd s=A_101,P_43 d=A_103,P_43
+p net@24 net@12 net@21 2 20 21 7.5 g=S_vdd s=A_103,P_43 d=A_96,P_42
+p net@12 Q vdd 2 20 74.5 7.5 g=S_vdd s=A_120,P_46 d=A_628,P_156
+p Q notQ vdd 2 20 102.5 7.5 g=S_vdd s=A_97,P_43 d=A_628,P_156
+p clk notQ net@12 2 20 49 7.5 g=S_vdd s=A_97,P_43 d=A_103,P_43
+p clk net@24 vdd 2 20 -12.5 8 g=S_vdd s=A_90,P_42 d=A_628,P_156
+r net@1_contact@3 net@1_nmos@0 12.0
+r net@1_contact@0 net@1_pmos@0 30.833333333333336
+C net@1 gnd 6.39
+
+r net@21_contact@49 net@21_nmos@3 114.7
+C net@21 gnd 13.3
+
+C clk gnd 11.93
+r net@24_contact@53 net@24_nmos@9 27.0
+r net@24_contact@50 net@24_pmos@9 47.5
+C net@24 gnd 7.84
+C vdd gnd 31.15
+r net@7_contact@22 net@7_pmos@2 148.8
+C net@7 gnd 9.16
+r notQ_contact@24 notQ_contact@45 10.85175
+C notQ gnd 34.67
+
+C net@41 gnd 7.63
+
+r Q_contact@35 Q_nmos@6 7.0
+r Q_contact@32 Q_pmos@6 14.166666666666668
+C Q gnd 7.82
+r net@12_contact@47 net@12_pmos@6 120.72777777777777
+C net@12 gnd 9.24

@@ -1,0 +1,25 @@
+| units: 17.5 tech: mocmos format: SU
+| IRSIM file for cell divider{sch} from library 3bitCounter
+| Created on Sun Nov 17, 2024 22:44:52
+| Last revised on Mon Nov 18, 2024 00:21:13
+| Written on Fri Nov 22, 2024 13:28:30 by Electric VLSI Design System, version 9.07
+n clk Dflipflo@0/net@21 Dflipflo@0/net@162 2 10 8.5 -15 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Dflipflo@0/net@2 Dflipflo@0/net@21 notQ 2 10 -17 2 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Dflipflo@0/net@21 gnd Dflipflo@0/net@212 2 10 12 3 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n clk gnd Dflipflo@0/net@2 2 10 -29.5 -4 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Dflipflo@0/net@212 gnd Dflipflo@0/net@162 2 10 26 -14.5 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n clk Dflipflo@0/net@268 Dflipflo@0/net@212 2 10 54 1.5 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n clk gnd Dflipflo@0/net@241 2 10 38.5 10.5 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Dflipflo@0/net@241 Dflipflo@0/net@268 notQ 2 10 66 -11 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Dflipflo@0/net@268 gnd Q 2 10 75 2 g=S_gnd s=A_10,P_22 d=A_10,P_22
+n Q gnd notQ 2 10 90 -9.5 g=S_gnd s=A_10,P_22 d=A_10,P_22
+p Dflipflo@0/net@2 Dflipflo@0/net@162 Dflipflo@0/net@21 2 20 8.5 -8 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p clk notQ Dflipflo@0/net@21 2 20 -17 11 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p Dflipflo@0/net@21 vdd Dflipflo@0/net@212 2 20 12 10 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p clk vdd Dflipflo@0/net@2 2 20 -29.5 2 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p Dflipflo@0/net@212 vdd Dflipflo@0/net@162 2 20 26 -8.5 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p Dflipflo@0/net@241 Dflipflo@0/net@212 Dflipflo@0/net@268 2 20 54 10.5 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p clk vdd Dflipflo@0/net@241 2 20 38.5 19 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p clk notQ Dflipflo@0/net@268 2 20 66 -4 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p Dflipflo@0/net@268 vdd Q 2 20 75 10.5 g=S_vdd s=A_20,P_42 d=A_20,P_42
+p Q vdd notQ 2 20 90 -3.5 g=S_vdd s=A_20,P_42 d=A_20,P_42

@@ -1,0 +1,53 @@
+*** SPICE deck for cell 3bitAsynchCountersim{lay} from library 3bitCounter
+*** Created on Mon Nov 18, 2024 14:36:09
+*** Last revised on Mon Nov 18, 2024 23:16:47
+*** Written on Tue Nov 19, 2024 01:42:57 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT _3bitCounter__Dflipflop FROM CELL 3bitCounter:Dflipflop{lay}
+.SUBCKT _3bitCounter__Dflipflop clk D gnd notQ Q vdd
+Mnmos@0 net@1 clk gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.063P PS=23.625U PD=7.613U
+Mnmos@1 net@4 net@1 D gnd NMOS L=0.35U W=1.75U AS=2.909P AD=3.177P PS=7.437U PD=7.656U
+Mnmos@2 net@19 net@4 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=2.948P PS=23.625U PD=7.481U
+Mnmos@3 net@66 net@19 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.101P PS=23.625U PD=7.613U
+Mnmos@4 net@66 clk net@4 gnd NMOS L=0.35U W=1.75U AS=3.177P AD=3.101P PS=7.656U PD=7.613U
+Mnmos@6 net@93 clk net@19 gnd NMOS L=0.35U W=1.75U AS=2.948P AD=3.177P PS=7.481U PD=7.656U
+Mnmos@7 Q net@93 gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.675P PS=23.625U PD=8.05U
+Mnmos@8 notQ Q gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=3.024P PS=23.625U PD=7.569U
+Mnmos@9 notQ net@100 net@93 gnd NMOS L=0.35U W=1.75U AS=3.177P AD=3.024P PS=7.656U PD=7.569U
+Mnmos@10 net@100 clk gnd gnd NMOS L=0.35U W=1.75U AS=17.099P AD=2.756P PS=23.625U PD=7.35U
+Mpmos@0 vdd clk net@1 vdd PMOS L=0.35U W=3.5U AS=3.063P AD=19.243P PS=7.613U PD=27.329U
+Mpmos@1 D clk net@4 vdd PMOS L=0.35U W=3.5U AS=3.177P AD=2.909P PS=7.656U PD=7.437U
+Mpmos@2 vdd net@4 net@19 vdd PMOS L=0.35U W=3.5U AS=2.948P AD=19.243P PS=7.481U PD=27.329U
+Mpmos@3 vdd net@19 net@66 vdd PMOS L=0.35U W=3.5U AS=3.101P AD=19.243P PS=7.613U PD=27.329U
+Mpmos@4 net@4 net@1 net@66 vdd PMOS L=0.35U W=3.5U AS=3.101P AD=3.177P PS=7.613U PD=7.656U
+Mpmos@6 net@19 net@100 net@93 vdd PMOS L=0.35U W=3.5U AS=3.177P AD=2.948P PS=7.656U PD=7.481U
+Mpmos@7 vdd net@93 Q vdd PMOS L=0.35U W=3.5U AS=3.675P AD=19.243P PS=8.05U PD=27.329U
+Mpmos@8 vdd Q notQ vdd PMOS L=0.35U W=3.5U AS=3.024P AD=19.243P PS=7.569U PD=27.329U
+Mpmos@9 net@93 clk notQ vdd PMOS L=0.35U W=3.5U AS=3.024P AD=3.177P PS=7.569U PD=7.656U
+Mpmos@10 vdd clk net@100 vdd PMOS L=0.35U W=3.5U AS=2.756P AD=19.243P PS=7.35U PD=27.329U
+.ENDS _3bitCounter__Dflipflop
+
+*** SUBCIRCUIT _3bitCounter__3bitAsynchCounter FROM CELL 3bitCounter:3bitAsynchCounter{lay}
+.SUBCKT _3bitCounter__3bitAsynchCounter clk gnd Q0 Q1 Q2 vdd
+XDflipflo@0 clk net@1 gnd net@1 Q0 vdd _3bitCounter__Dflipflop
+XDflipflo@1 net@1 net@26 gnd net@26 Q1 vdd _3bitCounter__Dflipflop
+XDflipflo@2 net@26 net@35 gnd net@35 Q2 vdd _3bitCounter__Dflipflop
+.ENDS _3bitCounter__3bitAsynchCounter
+
+*** TOP LEVEL CELL: 3bitCounter:3bitAsynchCountersim{lay}
+X_3bitAsyn@0 clk gnd Q0 Q1 Q2 vdd _3bitCounter__3bitAsynchCounter
+
+* Spice Code nodes in cell cell '3bitCounter:3bitAsynchCountersim{lay}'
+* Power Supply
+vdd vdd 0 DC 5V
+* Clock signal (50% duty cycle, period = 100ns)
+vclk clk 0 PULSE(5 0 0n 1n 1n 50n 100n)
+* Simulation Command
+.tran 10n 1.5u
+* Include the D flip-flop model
+.include D:\C5_models.txt
+* End of File
+.end
+.END
